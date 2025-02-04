@@ -13,7 +13,8 @@ wide_to_long <- function(data, wef) {
                     "Country/Series-specific Notes"),
                  names_to = "Fecha", 
                  values_to = "Valor") |> 
-    mutate('Fecha Reporte' = as.Date(wef))
+    mutate('Fecha Reporte' = as.Date(wef), 
+           Fecha = as.numeric(Fecha))
 }
 #Load data=================
 load("Data/FMI/data_fmi.rdata")
@@ -42,18 +43,25 @@ save(data_fmi, file = "Data/FMI/data_fmi.Rdata")
 lac <- c("ARG", "BHS", "BRB", "BLZ", "BOL", "BRA", "CHL", 
          "COL", "CRI", "DMA", "DOM", "ECU", "SLV", "GTM", 
          "GUY", "HTI", "HND", "JAM", "MEX", "NIC", "PAN", 
-         "PRY", "PER", "PRI", "SUR", "URY", "VEN")
+         "PRY", "PER", "PRI", "SUR", "URY", "VEN", "TTO")
 
 latam <- c("ARG", "BOL", "BRA", "CHL", "COL", "CRI", "DOM",
            "ECU", "SLV", "GTM", "HND", "MEX", "NIC", "PAN", 
            "PRY", "PER", "PRI", "URY", "VEN")
+
+hfhi <- c("ARG", "BOL", "BRA", "CHL", "COL", "CRI", "DOM",
+          "SLV", "GTM", "HND", "MEX", "NIC","PRY", 
+          "PER", "TTO")
+
+length(hfhi)
 
 paises <- data_fmi |> 
   select(`WEO Country Code`, ISO, Country) |> 
   distinct() |> 
   na.omit() |> 
   mutate(lac = ifelse(ISO %in% lac, T, F), 
-         latam = ifelse(ISO %in% latam, T, F))
+         latam = ifelse(ISO %in% latam, T, F), 
+         hfhi = ifelse(ISO %in% hfhi, T, F))
 
 save(paises, file = "Data/paises.Rdata")
 
