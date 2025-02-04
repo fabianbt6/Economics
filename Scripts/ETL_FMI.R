@@ -37,6 +37,7 @@ data_fmi <- data_apr24_long |>
   na.omit()
 
 save(data_fmi, file = "Data/FMI/data_fmi.Rdata")
+save(data_fmi, file = "Reports/LATAM_Economic_Dashboard/data_fmi.Rdata")
 
 #Lista de paises e indicadores=============
 
@@ -64,6 +65,7 @@ paises <- data_fmi |>
          hfhi = ifelse(ISO %in% hfhi, T, F))
 
 save(paises, file = "Data/paises.Rdata")
+save(paises, file = "Reports/LATAM_Economic_Dashboard/paises.Rdata")
 
 indicadores_fmi <- data_fmi |> 
   select(`WEO Subject Code`, `Subject Descriptor`, 
@@ -72,3 +74,4 @@ indicadores_fmi <- data_fmi |>
   na.omit()
 
 save(indicadores_fmi, file = "Data/FMI/indicadores_fmi.Rdata")
+save(indicadores_fmi, file = "Reports/LATAM_Economic_Dashboard/indicadores_fmi.Rdata")
