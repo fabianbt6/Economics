@@ -17,7 +17,7 @@ rsconnect::writeManifest()
 
 
 #load & filter data===========
-load(file = "data_fmi.RData") 
+#load(file = "data_fmi.RData") 
 load(file = "indicadores_fmi.RData")
 load(file = "paises.RData")
 
