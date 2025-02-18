@@ -1,40 +1,15 @@
 ---
 title: "Economic Dashboard"
+author: "Fabián Brenes"
 format: dashboard
 server: shiny
 ---
 
-```{r libs}
-#| warning: false 
-
-library(shiny)
-library(bslib)
-library(tidyverse)
-library(ggplot2)
-library(gt)
-library(rsconnect)
-```
-
-```{r palette}
-
-primary <- "#1134A6"
-secondary <- "#1e8ad3"
-light <- "#d3f4fb"
-highlight <- "#10bc10"
-white <- "#ffffff"
-dark <- "#1d3537"
-info <- "#1aa53f"
-success <- "#009758"
-warning <- "#ddc800"
-danger <- "#ea1d00"
-
-```
-
-## Shiny Documents
+# Shiny Documents
 
 This Quarto document is made interactive using Shiny. Interactive documents allow readers to modify parameters and see the results immediately. Learn more about Shiny interactive documents at <https://quarto.org/docs/interactive/shiny/>.
 
-## Inputs and Outputs
+# Inputs and Outputs
 
 You can embed Shiny inputs and outputs in your document. Outputs are automatically updated whenever inputs change. This demonstrates how a standard R plot can be made interactive:
 
