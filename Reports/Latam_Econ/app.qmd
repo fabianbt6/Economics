@@ -5,6 +5,19 @@ format: dashboard
 server: shiny
 ---
 
+```{r libs}
+library(tidyverse)
+library(ggplot2)
+library(gt)
+library(rsconnect)
+```
+
+```{r mainfest}
+
+writeManifest()
+
+```
+
 # Shiny Documents
 
 This Quarto document is made interactive using Shiny. Interactive documents allow readers to modify parameters and see the results immediately. Learn more about Shiny interactive documents at <https://quarto.org/docs/interactive/shiny/>.
