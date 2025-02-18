@@ -26,13 +26,13 @@ This Quarto document is made interactive using Shiny. Interactive documents allo
 
 You can embed Shiny inputs and outputs in your document. Outputs are automatically updated whenever inputs change. This demonstrates how a standard R plot can be made interactive:
 
-```{r}
+```{r ui}
 sliderInput("bins", "Number of bins:", 
             min = 1, max = 50, value = 30)
 plotOutput("distPlot")
 ```
 
-```{r}
+```{r server}
 #| context: server
 output$distPlot <- renderPlot({
    x <- faithful[, 2]  # Old Faithful Geyser data

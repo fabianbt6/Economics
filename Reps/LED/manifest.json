@@ -3681,13 +3681,13 @@
   },
   "files": {
     "app.html": {
-      "checksum": "8ce7be9ab87637b58a5a5c055c81872e"
+      "checksum": "b589c059b401c70074d101aed21ee46b"
     },
     "app.qmd": {
-      "checksum": "65e0f41dbabd556fb4ee69b1185a4585"
+      "checksum": "cbd4e78c1bea136d0cde3574f1011d1a"
     },
     "app.rmarkdown": {
-      "checksum": "e4d4f76c1790821ed701e10d9af1f206"
+      "checksum": "b2854042028b878169e4cdba89a50865"
     },
     "app_files/libs/bootstrap/bootstrap-icons.css": {
       "checksum": "2318f137d201fbf51601fa0faba6bef7"
